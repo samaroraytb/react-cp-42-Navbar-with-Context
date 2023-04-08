@@ -21,13 +21,13 @@ const Navbar = () => (
             <img
               className="navbar-logo"
               src="https://assets.ccbp.in/frontend/react-js/website-logo-dark-theme-img.png"
-              alt="logo"
+              alt="website logo"
             />
           ) : (
             <img
               className="navbar-logo"
               src="https://assets.ccbp.in/frontend/react-js/website-logo-light-theme-img.png"
-              alt="logo"
+              alt="website logo"
             />
           )}
           <ul className="navbar-un-order-list-container">
@@ -52,7 +52,11 @@ const Navbar = () => (
               </li>
             </Link>
           </ul>
-          <button type="button" onClick={changingThemeNavbar}>
+          <button
+            data-testid="theme"
+            type="button"
+            onClick={changingThemeNavbar}
+          >
             {isDarkTheme ? (
               <img
                 className="navbar-logo-dark-light"
