@@ -1,1 +1,29 @@
-/* Write your CSS here */
+* {
+  padding: 0px;
+  margin: 0px;
+}
+.main-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.route-main-image {
+  width: 200px;
+  height: 200px;
+}
+.dark-bg-light-color {
+  background-color: black;
+  color: white;
+}
+.light-bg-dark-color {
+  color: #1e293b;
+  background-color: white;
+}
+@media all and (min-width: 768px) {
+  .route-main-image {
+    width: 300px;
+    height: 300px;
+  }
+}

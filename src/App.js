@@ -7,17 +7,29 @@ import Home from './components/Home/index'
 import About from './components/About'
 
 import NotFound from './components/NotFound'
+import ThemeContext from './context/ThemeContext'
 
 import './App.css'
 
 class App extends Component {
+  state = {isDarkTheme: false}
+
+  changeThemeApp = () => {
+    this.setState(prevState => ({isDarkTheme: !prevState.isDarkTheme}))
+  }
+
   render() {
+    const {isDarkTheme} = this.state
     return (
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/about" component={About} />
-        <Route component={NotFound} />
-      </Switch>
+      <ThemeContext.Provider
+        value={{isDarkTheme, toggleTheme: this.changeThemeApp}}
+      >
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/about" component={About} />
+          <Route component={NotFound} />
+        </Switch>
+      </ThemeContext.Provider>
     )
   }
 }

@@ -1,1 +1,42 @@
-/* Write your CSS here */
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+.navbar-main-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+.navbar-dark-bg-light-color {
+  background: #333333;
+  color: white;
+}
+.navbar-light-bg {
+  color: black;
+  background-color: white;
+}
+.navbar-logo {
+  width: 70px;
+}
+.navbar-logo-dark-light {
+  width: 50px;
+}
+.navbar-un-order-list-container {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+.navbar-list-item {
+  font-size: 20px;
+  margin: 0px 5px 0px 5px;
+  font-weight: bold;
+}
+@media all and (min-width: 768px) {
+  .navbar-un-order-list-container {
+    width: 200px;
+    justify-content: space-between;
+  }
+}
